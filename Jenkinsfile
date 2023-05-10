@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('listar') {
-      steps {
-        sh 'ls -la'
+      parallel {
+        stage('listar') {
+          steps {
+            sh 'ls -la'
+          }
+        }
+
+        stage('install librerias') {
+          steps {
+            sh 'pip install -r requirements.txt'
+          }
+        }
+
       }
     }
 
