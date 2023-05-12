@@ -8,19 +8,14 @@ pipeline {
     }
 
     stage('listar') {
-      parallel {
-        stage('listar') {
-          steps {
-            sh 'ls -la'
-          }
-        }
+      steps {
+        sh 'ls -la'
+      }
+    }
 
-        stage('install librerias') {
-          steps {
-            sh 'pip install -r requirements.txt'
-          }
-        }
-
+    stage('build') {
+      steps {
+        sh 'docker build -f totemlogbd/Dockerfile .'
       }
     }
 
