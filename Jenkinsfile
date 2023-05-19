@@ -44,7 +44,7 @@ pwd'''
 
     stage('Push') {
       steps {
-        sh 'docker push /pythonbd:1.0'
+        sh 'docker push james18bt/pythonbd:1.0'
       }
     }
 
