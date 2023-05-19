@@ -17,7 +17,7 @@ pwd'''
 
     stage('build') {
       steps {
-        sh 'docker build -f /Dockerfile .'
+        sh 'docker build -f totemlogbd_master/Dockerfile .'
       }
     }
 
