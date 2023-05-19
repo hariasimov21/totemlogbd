@@ -28,7 +28,7 @@ pwd'''
 
     stage('build') {
       steps {
-        sh 'docker build -t pythonbd:1.0 -f Dockerfile .'
+        sh 'docker build -t james18bt/pythonbd:1.0 -f Dockerfile .'
       }
     }
 
