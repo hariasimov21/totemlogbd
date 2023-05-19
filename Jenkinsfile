@@ -8,10 +8,21 @@ pipeline {
     }
 
     stage('listar') {
-      steps {
-        sh '''ls -la
+      parallel {
+        stage('listar') {
+          steps {
+            sh '''ls -la
 
 pwd'''
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'pwd'
+          }
+        }
+
       }
     }
 
