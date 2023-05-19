@@ -28,7 +28,7 @@ pwd'''
 
     stage('build') {
       steps {
-        sh 'docker build -f Dockerfile .'
+        sh 'docker build -t pythonbd:1.0 -f Dockerfile .'
       }
     }
 
@@ -39,6 +39,12 @@ pwd'''
       }
       steps {
         sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
+      }
+    }
+
+    stage('Push') {
+      steps {
+        sh 'docker push james18bt/pythonbd:1.0'
       }
     }
 
