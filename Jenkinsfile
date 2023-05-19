@@ -9,7 +9,9 @@ pipeline {
 
     stage('listar') {
       steps {
-        sh 'ls -la'
+        sh '''ls -la
+
+pwd'''
       }
     }
 
