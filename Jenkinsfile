@@ -34,7 +34,7 @@ pwd'''
 
     stage('Login to Dockerhub') {
       environment {
-        DOCKERHUB_USER = 'james18bt@gmail.com'
+        DOCKERHUB_USER = 'james18bt'
         DOCKERHUB_PASSWORD = 'linkinpark16'
       }
       steps {
