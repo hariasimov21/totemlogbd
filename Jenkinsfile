@@ -32,5 +32,15 @@ pwd'''
       }
     }
 
+    stage('Login to Dockerhub') {
+      environment {
+        DOCKERHUB_USER = 'james18bt@gmail.com'
+        DOCKERHUB_PASSWORD = 'linkinpark16'
+      }
+      steps {
+        sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
+      }
+    }
+
   }
 }
