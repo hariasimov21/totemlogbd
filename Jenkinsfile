@@ -15,7 +15,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -f totemlogbd/Dockerfile .'
+        sh 'docker build -f /Dockerfile .'
       }
     }
 
