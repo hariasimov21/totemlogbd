@@ -17,7 +17,7 @@ pwd'''
           }
         }
 
-        stage('') {
+        stage('ruta') {
           steps {
             sh 'pwd'
           }
